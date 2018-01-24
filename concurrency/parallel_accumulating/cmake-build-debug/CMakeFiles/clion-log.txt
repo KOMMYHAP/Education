@@ -1,0 +1,4 @@
+/home/kommyhap/clion-2017.2.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/kommyhap/programs/education/concurrency/parallel_accumulating
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/kommyhap/programs/education/concurrency/parallel_accumulating/cmake-build-debug

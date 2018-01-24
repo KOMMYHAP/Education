@@ -1,0 +1,3 @@
+/home/kommyhap/programs/education/concurrency/lesson1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/kommyhap/programs/education/concurrency/lesson1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/kommyhap/programs/education/concurrency/lesson1/cmake-build-debug/CMakeFiles/concurrency.dir

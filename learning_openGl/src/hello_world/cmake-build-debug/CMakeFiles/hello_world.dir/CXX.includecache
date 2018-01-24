@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kommyhap/programs/openGL/learning_openGl/src/hello_world/main.cpp
+glad/glad.h
+-
+glad/khrplatform.h
+-
+GLFW/glfw3.h
+-
+iostream
+-
+

@@ -1,0 +1,1 @@
+find -name "-file0?" -size 1033c ! -executable

@@ -1,0 +1,3 @@
+/home/kommyhap/programs/openGL/learning_openGl/src/hello_world/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/kommyhap/programs/openGL/learning_openGl/src/hello_world/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/kommyhap/programs/openGL/learning_openGl/src/hello_world/cmake-build-debug/CMakeFiles/hello_world.dir

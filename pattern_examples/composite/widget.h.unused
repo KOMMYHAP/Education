@@ -1,0 +1,41 @@
+#include <list>
+#include <memory>
+
+template <class Trait>
+class IGlif
+{
+protected:
+	typedef std::shared_ptr<IGlif<Trait>> ptr_t;
+	typedef Trait trait_t;
+	trait_t _trait;
+public:
+	IGlif(trait_t trait) : _trait(trait) {}
+
+	virtual ~IGlif() = default;
+
+	virtual void draw() const = 0;
+};
+
+template <
+	class TraitWidget, 
+	class TraitGlif = TraitWidget::trait_t,
+	class >
+class Widget 
+{
+protected:
+	std::list<ptr_t> _list;
+public:
+	void add(const ptr_t &ptr) {
+		_list.push_back(ptr);
+	}
+
+	void remove(const ptr_t &ptr) {
+		_list.remove(ptr);
+	}
+
+	void draw() override {
+		for (auto const &x : _list) {
+			x->draw();
+		}
+	}
+};

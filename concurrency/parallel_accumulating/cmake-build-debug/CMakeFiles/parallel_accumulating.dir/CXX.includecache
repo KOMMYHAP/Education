@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kommyhap/programs/education/concurrency/parallel_accumulating/main.cpp
+thread
+-
+iostream
+-
+cstdint
+-
+numeric
+-
+functional
+-
+array
+-
+vector
+-
+

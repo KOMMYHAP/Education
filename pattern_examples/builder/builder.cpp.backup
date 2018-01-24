@@ -1,0 +1,130 @@
+/*
+	Допустим класс Person должен хранить информацию,
+	которую удобно разбить на несколько групп.
+	К примеру, информация о:
+	1) Работе:
+		a) название компании;
+		б) должность;
+		в) ежегодная зарплата.
+	2) Месте проживания:
+		a) название улицы
+		б) номер дома
+		в) etc
+	И чтобы, как минимум, не создавать объект с помощью конструктора с
+	куевой тучей аргументов - применяется паттерн builder.
+*/
+
+#include <string>
+#include <utility> // for std::move
+
+class Person;
+class PersonBuilder;
+class PersonAddressBuilder;
+class PersonWorkBuilder;
+
+class Person
+{
+	// work info:
+	std::string _company_name, _position;
+	int _annual_income = 0;
+
+	// personal info:
+	std::string _street_address, _post_code, _city;
+
+	// private c-tor
+	Person() = default;
+public:
+	friend class PersonBuilder;
+	friend class PersonAddressBuilder;
+	friend class PersonWorkBuilder;
+
+	static PersonBuilder create()
+	{
+		return PersonBuilder{};
+	}
+};
+
+class PersonBuilder
+{
+private:
+	Person _person;
+protected:
+	Person &_person_ref;
+
+	explicit PersonBuilder(Person &person_ref)
+		: _person_ref{ person_ref } { }
+public:
+	PersonBuilder() : _person_ref{ _person } { }
+	operator Person() { return std::move(_person_ref); }
+
+	PersonWorkBuilder works()
+	{
+		return PersonWorkBuilder{ _person_ref };
+	}
+
+	PersonAddressBuilder lives()
+	{
+		return PersonAddressBuilder{ _person_ref };
+	}
+};
+
+class PersonAddressBuilder : public PersonBuilder
+{
+	typedef PersonAddressBuilder Self;
+public:
+	explicit PersonAddressBuilder(Person &person_ref)
+		: PersonBuilder{ person_ref } { }
+
+	Self& at(std::string const &street_address)
+	{
+		_person_ref._street_address = street_address;
+		return *this;
+	}
+	Self& with_post_code(std::string const &post_code)
+	{
+		_person_ref._post_code = post_code;
+		return *this;
+	}
+	Self& in(std::string const &city)
+	{
+		_person_ref._city = city;
+		return *this;
+	}
+};
+
+class PersonWorkBuilder : public PersonBuilder
+{
+	typedef PersonWorkBuilder Self;
+public:
+	explicit PersonWorkBuilder(Person &person_ref)
+		: PersonBuilder{ person_ref } { }
+
+	Self& in(std::string const &company_name)
+	{
+		_person_ref._company_name = company_name;
+		return *this;
+	}
+	Self& earning(int annual_income)
+	{
+		_person_ref._annual_income = annual_income;
+		return *this;
+	}
+	Self& as_a(std::string const &position)
+	{
+		_person_ref._position = position;
+		return *this;
+	}
+};
+
+int main()
+{
+	Person p = Person::create()
+		.works()
+			.in("The Coca-Cola Company")
+			.earning(10e9)
+			.as_a("cleaner")
+		.lives()
+			.in("Russia")
+			.at("Bluhera 32/1")
+			.with_post_code("M630073");
+}

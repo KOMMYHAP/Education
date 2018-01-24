@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2f062738-8fef-4dcd-ad23-a1dad4c84ee9" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="chrono" pinned="false" current-in-tab="true">
+        <entry file="file:///usr/include/c++/7/chrono">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="811" column="23" lean-forward="false" selection-start-line="811" selection-start-column="23" selection-end-line="811" selection-end-column="23" />
+              <folding>
+                <marker date="1508013340000" expanded="false" signature="1242:1274" ph="..." />
+                <marker date="1508013340000" expanded="false" signature="1291:1413" ph="..." />
+                <marker date="1508013340000" expanded="true" signature="1494:29654" ph="{...}" />
+                <marker date="1508013340000" expanded="true" signature="1498:1608" ph="/**...*/" />
+                <marker date="1508013340000" expanded="true" signature="1612:1712" ph="/**...*/" />
+                <marker date="1508013340000" expanded="true" signature="1734:1988" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="1776:1828" ph="&lt;_Rep,_Period=ratio&lt;1&gt;&gt;" />
+                <marker date="1508013340000" expanded="false" signature="1857:1925" ph="&lt;_Clock,_Dur=_Clock::duration&gt;" />
+                <marker date="1508013340000" expanded="false" signature="2104:2164" ph="&lt;_CT,_Period1,_Period2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="2211:2585" ph="{...}" />
+                <marker date="1508013340000" expanded="true" signature="2420:2498" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="false" signature="2590:2636" ph="&lt;_Period1,_Period2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="2719:2751" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="2756:2834" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="2857:2940" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="2984:3083" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="3015:3056" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="false" signature="3182:3221" ph="&lt;_CT,_Clock&gt;" />
+                <marker date="1508013340000" expanded="true" signature="3269:3367" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="3372:3397" ph="&lt;_Clock&gt;" />
+                <marker date="1508013340000" expanded="true" signature="3469:3501" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="3506:3573" ph="&lt;_Clock,_Duration1,_Duration2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="3596:3689" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="3734:3831" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="3765:3816" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="3901:26535" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="3991:4098" ph="&lt;_ToDur,_CF,_CR,bool _NumIsOne=false,bool _DenIsOne=false&gt;" />
+                <marker date="1508013340000" expanded="true" signature="4139:4466" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="4142:4183" ph="&lt;_Rep,_Period&gt;" />
+                <marker date="1508013340000" expanded="true" signature="4260:4458" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="4473:4526" ph="&lt;_ToDur,_CF,_CR&gt;" />
+                <marker date="1508013340000" expanded="true" signature="4597:4834" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="4600:4641" ph="&lt;_Rep,_Period&gt;" />
+                <marker date="1508013340000" expanded="true" signature="4718:4826" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="4841:4894" ph="&lt;_ToDur,_CF,_CR&gt;" />
+                <marker date="1508013340000" expanded="true" signature="4966:5258" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="4969:5010" ph="&lt;_Rep,_Period&gt;" />
+                <marker date="1508013340000" expanded="true" signature="5087:5250" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="5265:5318" ph="&lt;_ToDur,_CF,_CR&gt;" />
+                <marker date="1508013340000" expanded="true" signature="5390:5682" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="5393:5434" ph="&lt;_Rep,_Period&gt;" />
+                <marker date="1508013340000" expanded="true" signature="5511:5674" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="5689:5711" ph="&lt;_Tp&gt;" />
+                <marker date="1508013340000" expanded="false" signature="5779:5820" ph="&lt;_Rep,_Period&gt;" />
+                <marker date="1508013340000" expanded="false" signature="5934:5992" ph="&lt;_ToDur,_Rep,_Period&gt;" />
+                <marker date="1508013340000" expanded="true" signature="6027:6072" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="6141:6498" ph="{...}" />
+                <marker date="1508013340000" expanded="true" signature="6395:6457" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="false" signature="6536:6559" ph="&lt;_Rep&gt;" />
+                <marker date="1508013340000" expanded="false" signature="6671:6797" ph="..." />
+                <marker date="1508013340000" expanded="false" signature="6841:8276" ph="..." />
+                <marker date="1508013340000" expanded="false" signature="8322:8345" ph="&lt;_Rep&gt;" />
+                <marker date="1508013340000" expanded="true" signature="8381:8589" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="8596:8618" ph="&lt;_Tp&gt;" />
+                <marker date="1508013340000" expanded="false" signature="8683:8721" ph="&lt;intmax_t _Num,intmax_t _Den&gt;" />
+                <marker date="1508013340000" expanded="false" signature="8821:8862" ph="&lt;_Rep,_Period&gt;" />
+                <marker date="1508013340000" expanded="true" signature="8891:11929" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="9467:9666" ph="&lt;_Rep2,=enable_if&lt;is_convertible&lt;_Rep2,rep&gt;::value&amp;&amp;(treat_as_floating_point&lt;rep&gt;::value||!treat_as_floating_point&lt;_Rep2&gt;::value)&gt;::type&gt;" />
+                <marker date="1508013340000" expanded="false" signature="9758:9983" ph="&lt;_Rep2,_Period2,=enable_if&lt;treat_as_floating_point&lt;rep&gt;::value||(ratio_divide&lt;_Period2,period&gt;::den==1&amp;&amp;!treat_as_floating_point&lt;_Rep2&gt;::value)&gt;::type&gt;" />
+                <marker date="1508013340000" expanded="true" signature="10440:10471" ph="{...}" />
+                <marker date="1508013340000" expanded="true" signature="10598:10629" ph="{...}" />
+                <marker date="1508013340000" expanded="true" signature="10775:10819" ph="{...}" />
+                <marker date="1508013340000" expanded="true" signature="10887:10931" ph="{...}" />
+                <marker date="1508013340000" expanded="true" signature="10996:11034" ph="{...}" />
+                <marker date="1508013340000" expanded="true" signature="11099:11137" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="11152:11182" ph="&lt;_Rep2=rep&gt;" />
+                <marker date="1508013340000" expanded="true" signature="11228:11287" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="11329:11373" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="11376:11406" ph="&lt;_Rep2=rep&gt;" />
+                <marker date="1508013340000" expanded="true" signature="11452:11511" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="11556:11606" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="11936:12020" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="12057:12120" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="12231:12444" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="12450:12534" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="12571:12634" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="12745:12958" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="12964:13096" ph="&lt;_Rep1,_Rep2,bool=is_convertible&lt;_Rep2,common_type&lt;_Rep1,_Rep2&gt;::type&gt;::value&gt;" />
+                <marker date="1508013340000" expanded="false" signature="13138:13178" ph="&lt;_Rep1,_Rep2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="13236:13294" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="13301:13359" ph="&lt;_Rep1,_Period,_Rep2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="13525:13651" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="13657:13715" ph="&lt;_Rep1,_Rep2,_Period&gt;" />
+                <marker date="1508013340000" expanded="false" signature="13908:13966" ph="&lt;_Rep1,_Period,_Rep2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="13991:14105" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="14018:14089" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="14183:14309" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="14315:14399" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="14561:14768" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="14789:14847" ph="&lt;_Rep1,_Period,_Rep2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="14872:14986" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="14899:14970" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="15064:15190" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="15196:15280" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="15317:15380" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="15491:15704" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="15729:15813" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="15941:16149" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="16155:16239" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="16365:16572" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="16578:16662" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+                <marker date="1508013340000" expanded="false" signature="16825:16909" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+                <marker date="1508013340000" expanded="false" signature="17071:17155" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+                <marker date="1508013340000" expanded="false" signature="17312:17396" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+                <marker date="1508013340000" expanded="false" signature="18006:18046" ph="&lt;_Clock,_Dur&gt;" />
+                <marker date="1508013340000" expanded="true" signature="18077:19077" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="18373:18450" ph="&lt;_Dur2,=_Require&lt;is_convertible&lt;_Dur2,_Dur&gt;&gt;&gt;" />
+                <marker date="1508013340000" expanded="true" signature="18715:18753" ph="{...}" />
+                <marker date="1508013340000" expanded="true" signature="18825:18863" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="19108:19165" ph="&lt;_ToDur,_Clock,_Dur&gt;" />
+                <marker date="1508013340000" expanded="true" signature="19200:19265" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="19337:19468" ph="{...}" />
+                <marker date="1508013340000" expanded="true" signature="19500:20493" ph="..." />
+                <marker date="1508013340000" expanded="false" signature="20515:20597" ph="&lt;_Clock,_Dur1,_Rep2,_Period2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="20624:20695" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="20800:21017" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="21023:21105" ph="&lt;_Rep1,_Period1,_Clock,_Dur2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="21132:21203" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="21308:21525" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="21531:21613" ph="&lt;_Clock,_Dur1,_Rep2,_Period2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="21640:21711" ph="&lt;~&gt;" />
+                <marker date="1508013340000" expanded="true" signature="21816:22032" ph="{...}" />
+                <marker date="1508013340000" expanded="false" signature="22038:22095" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+                <marker date="1508013340000" expanded="false" signature="22326:22383" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+                <marker date="1508013340000" expanded="false" signature="22581:22638" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+                <marker date="1508013340000" expanded="false" signature="22801:22858" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+                <marker date="1508013340000" expanded="false" signature="23054:23111" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+                <marker date="1508013340000" expanded="false" signature="23273:23330" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+                <marker date="1508013340000" expanded="false" signature="23487:23544" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+                <marker date="1508013340000" expanded="true" signature="24668:26469" ph="{...}" />
+                <marker date="1508013340000" expanded="true" signature="24675:24792" ph="/**...*/" />
+                <marker date="1508013340000" expanded="true" signature="24821:25724" ph="{...}" />
+                <marker date="1508013340000" expanded="true" signature="25385:25486" ph="{...}" />
+                <marker date="1508013340000" expanded="true" signature="25562:25718" ph="{...}" />
+                <marker date="1508013340000" expanded="true" signature="25732:25857" ph="/**...*/" />
+                <marker date="1508013340000" expanded="true" signature="25886:26189" ph="{...}" />
+                <marker date="1508013340000" expanded="true" signature="26197:26414" ph="/**...*/" />
+                <marker date="1508013340000" expanded="false" signature="26584:29597" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/main.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="683" />
+    <option name="height" value="768" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="concurrency" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="lesson1" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+      <envs />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2f062738-8fef-4dcd-ad23-a1dad4c84ee9" name="Default" comment="" />
+      <created>1516458065494</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1516458065494</updated>
+      <workItem from="1516458066712" duration="30000" />
+      <workItem from="1516464803739" duration="2340000" />
+      <workItem from="1516477409367" duration="5000" />
+      <workItem from="1516477419041" duration="4000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2379000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32924962" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45635527" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924962" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file:///usr/include/c++/7/chrono">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1508013340000" expanded="false" signature="1242:1274" ph="..." />
+            <marker date="1508013340000" expanded="false" signature="1291:1413" ph="..." />
+            <marker date="1508013340000" expanded="true" signature="1494:29654" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="1498:1608" ph="/**...*/" />
+            <marker date="1508013340000" expanded="true" signature="1612:1712" ph="/**...*/" />
+            <marker date="1508013340000" expanded="true" signature="1734:1988" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="1776:1828" ph="&lt;_Rep,_Period=ratio&lt;1&gt;&gt;" />
+            <marker date="1508013340000" expanded="false" signature="1857:1925" ph="&lt;_Clock,_Dur=_Clock::duration&gt;" />
+            <marker date="1508013340000" expanded="false" signature="2104:2164" ph="&lt;_CT,_Period1,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="2211:2585" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="2420:2498" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="false" signature="2590:2636" ph="&lt;_Period1,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="2719:2751" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="2756:2834" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="2857:2940" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="2984:3083" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3015:3056" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="false" signature="3182:3221" ph="&lt;_CT,_Clock&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3269:3367" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="3372:3397" ph="&lt;_Clock&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3469:3501" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="3506:3573" ph="&lt;_Clock,_Duration1,_Duration2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3596:3689" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3734:3831" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3765:3816" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3901:26535" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="3991:4098" ph="&lt;_ToDur,_CF,_CR,bool _NumIsOne=false,bool _DenIsOne=false&gt;" />
+            <marker date="1508013340000" expanded="true" signature="4139:4466" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="4142:4183" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="4260:4458" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="4473:4526" ph="&lt;_ToDur,_CF,_CR&gt;" />
+            <marker date="1508013340000" expanded="true" signature="4597:4834" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="4600:4641" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="4718:4826" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="4841:4894" ph="&lt;_ToDur,_CF,_CR&gt;" />
+            <marker date="1508013340000" expanded="true" signature="4966:5258" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="4969:5010" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="5087:5250" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="5265:5318" ph="&lt;_ToDur,_CF,_CR&gt;" />
+            <marker date="1508013340000" expanded="true" signature="5390:5682" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="5393:5434" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="5511:5674" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="5689:5711" ph="&lt;_Tp&gt;" />
+            <marker date="1508013340000" expanded="false" signature="5779:5820" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="false" signature="5934:5992" ph="&lt;_ToDur,_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="6027:6072" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="6141:6498" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="6395:6457" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="false" signature="6536:6559" ph="&lt;_Rep&gt;" />
+            <marker date="1508013340000" expanded="false" signature="6671:6797" ph="..." />
+            <marker date="1508013340000" expanded="false" signature="6841:8276" ph="..." />
+            <marker date="1508013340000" expanded="false" signature="8322:8345" ph="&lt;_Rep&gt;" />
+            <marker date="1508013340000" expanded="true" signature="8381:8589" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="8596:8618" ph="&lt;_Tp&gt;" />
+            <marker date="1508013340000" expanded="false" signature="8683:8721" ph="&lt;intmax_t _Num,intmax_t _Den&gt;" />
+            <marker date="1508013340000" expanded="false" signature="8821:8862" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="8891:11929" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="9467:9666" ph="&lt;_Rep2,=enable_if&lt;is_convertible&lt;_Rep2,rep&gt;::value&amp;&amp;(treat_as_floating_point&lt;rep&gt;::value||!treat_as_floating_point&lt;_Rep2&gt;::value)&gt;::type&gt;" />
+            <marker date="1508013340000" expanded="false" signature="9758:9983" ph="&lt;_Rep2,_Period2,=enable_if&lt;treat_as_floating_point&lt;rep&gt;::value||(ratio_divide&lt;_Period2,period&gt;::den==1&amp;&amp;!treat_as_floating_point&lt;_Rep2&gt;::value)&gt;::type&gt;" />
+            <marker date="1508013340000" expanded="true" signature="10440:10471" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="10598:10629" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="10775:10819" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="10887:10931" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="10996:11034" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="11099:11137" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="11152:11182" ph="&lt;_Rep2=rep&gt;" />
+            <marker date="1508013340000" expanded="true" signature="11228:11287" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="11329:11373" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="11376:11406" ph="&lt;_Rep2=rep&gt;" />
+            <marker date="1508013340000" expanded="true" signature="11452:11511" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="11556:11606" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="11936:12020" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="12057:12120" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="12231:12444" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="12450:12534" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="12571:12634" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="12745:12958" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="12964:13096" ph="&lt;_Rep1,_Rep2,bool=is_convertible&lt;_Rep2,common_type&lt;_Rep1,_Rep2&gt;::type&gt;::value&gt;" />
+            <marker date="1508013340000" expanded="false" signature="13138:13178" ph="&lt;_Rep1,_Rep2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="13236:13294" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="13301:13359" ph="&lt;_Rep1,_Period,_Rep2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="13525:13651" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="13657:13715" ph="&lt;_Rep1,_Rep2,_Period&gt;" />
+            <marker date="1508013340000" expanded="false" signature="13908:13966" ph="&lt;_Rep1,_Period,_Rep2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="13991:14105" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="14018:14089" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="14183:14309" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="14315:14399" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="14561:14768" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="14789:14847" ph="&lt;_Rep1,_Period,_Rep2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="14872:14986" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="14899:14970" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="15064:15190" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="15196:15280" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="15317:15380" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="15491:15704" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="15729:15813" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="15941:16149" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="16155:16239" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="16365:16572" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="16578:16662" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="16825:16909" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="17071:17155" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="17312:17396" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="18006:18046" ph="&lt;_Clock,_Dur&gt;" />
+            <marker date="1508013340000" expanded="true" signature="18077:19077" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="18373:18450" ph="&lt;_Dur2,=_Require&lt;is_convertible&lt;_Dur2,_Dur&gt;&gt;&gt;" />
+            <marker date="1508013340000" expanded="true" signature="18715:18753" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="18825:18863" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="19108:19165" ph="&lt;_ToDur,_Clock,_Dur&gt;" />
+            <marker date="1508013340000" expanded="true" signature="19200:19265" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="19337:19468" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="19500:20493" ph="..." />
+            <marker date="1508013340000" expanded="false" signature="20515:20597" ph="&lt;_Clock,_Dur1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="20624:20695" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="20800:21017" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="21023:21105" ph="&lt;_Rep1,_Period1,_Clock,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="21132:21203" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="21308:21525" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="21531:21613" ph="&lt;_Clock,_Dur1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="21640:21711" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="21816:22032" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="22038:22095" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="22326:22383" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="22581:22638" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="22801:22858" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="23054:23111" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="23273:23330" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="23487:23544" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="24668:26469" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="24675:24792" ph="/**...*/" />
+            <marker date="1508013340000" expanded="true" signature="24821:25724" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="25385:25486" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="25562:25718" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="25732:25857" ph="/**...*/" />
+            <marker date="1508013340000" expanded="true" signature="25886:26189" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="26197:26414" ph="/**...*/" />
+            <marker date="1508013340000" expanded="false" signature="26584:29597" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/7/chrono">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1508013340000" expanded="false" signature="1242:1274" ph="..." />
+            <marker date="1508013340000" expanded="false" signature="1291:1413" ph="..." />
+            <marker date="1508013340000" expanded="true" signature="1494:29654" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="1498:1608" ph="/**...*/" />
+            <marker date="1508013340000" expanded="true" signature="1612:1712" ph="/**...*/" />
+            <marker date="1508013340000" expanded="true" signature="1734:1988" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="1776:1828" ph="&lt;_Rep,_Period=ratio&lt;1&gt;&gt;" />
+            <marker date="1508013340000" expanded="false" signature="1857:1925" ph="&lt;_Clock,_Dur=_Clock::duration&gt;" />
+            <marker date="1508013340000" expanded="false" signature="2104:2164" ph="&lt;_CT,_Period1,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="2211:2585" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="2420:2498" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="false" signature="2590:2636" ph="&lt;_Period1,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="2719:2751" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="2756:2834" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="2857:2940" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="2984:3083" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3015:3056" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="false" signature="3182:3221" ph="&lt;_CT,_Clock&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3269:3367" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="3372:3397" ph="&lt;_Clock&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3469:3501" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="3506:3573" ph="&lt;_Clock,_Duration1,_Duration2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3596:3689" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3734:3831" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3765:3816" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3901:26535" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="3991:4098" ph="&lt;_ToDur,_CF,_CR,bool _NumIsOne=false,bool _DenIsOne=false&gt;" />
+            <marker date="1508013340000" expanded="true" signature="4139:4466" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="4142:4183" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="4260:4458" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="4473:4526" ph="&lt;_ToDur,_CF,_CR&gt;" />
+            <marker date="1508013340000" expanded="true" signature="4597:4834" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="4600:4641" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="4718:4826" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="4841:4894" ph="&lt;_ToDur,_CF,_CR&gt;" />
+            <marker date="1508013340000" expanded="true" signature="4966:5258" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="4969:5010" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="5087:5250" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="5265:5318" ph="&lt;_ToDur,_CF,_CR&gt;" />
+            <marker date="1508013340000" expanded="true" signature="5390:5682" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="5393:5434" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="5511:5674" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="5689:5711" ph="&lt;_Tp&gt;" />
+            <marker date="1508013340000" expanded="false" signature="5779:5820" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="false" signature="5934:5992" ph="&lt;_ToDur,_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="6027:6072" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="6141:6498" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="6395:6457" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="false" signature="6536:6559" ph="&lt;_Rep&gt;" />
+            <marker date="1508013340000" expanded="false" signature="6671:6797" ph="..." />
+            <marker date="1508013340000" expanded="false" signature="6841:8276" ph="..." />
+            <marker date="1508013340000" expanded="false" signature="8322:8345" ph="&lt;_Rep&gt;" />
+            <marker date="1508013340000" expanded="true" signature="8381:8589" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="8596:8618" ph="&lt;_Tp&gt;" />
+            <marker date="1508013340000" expanded="false" signature="8683:8721" ph="&lt;intmax_t _Num,intmax_t _Den&gt;" />
+            <marker date="1508013340000" expanded="false" signature="8821:8862" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="8891:11929" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="9467:9666" ph="&lt;_Rep2,=enable_if&lt;is_convertible&lt;_Rep2,rep&gt;::value&amp;&amp;(treat_as_floating_point&lt;rep&gt;::value||!treat_as_floating_point&lt;_Rep2&gt;::value)&gt;::type&gt;" />
+            <marker date="1508013340000" expanded="false" signature="9758:9983" ph="&lt;_Rep2,_Period2,=enable_if&lt;treat_as_floating_point&lt;rep&gt;::value||(ratio_divide&lt;_Period2,period&gt;::den==1&amp;&amp;!treat_as_floating_point&lt;_Rep2&gt;::value)&gt;::type&gt;" />
+            <marker date="1508013340000" expanded="true" signature="10440:10471" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="10598:10629" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="10775:10819" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="10887:10931" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="10996:11034" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="11099:11137" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="11152:11182" ph="&lt;_Rep2=rep&gt;" />
+            <marker date="1508013340000" expanded="true" signature="11228:11287" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="11329:11373" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="11376:11406" ph="&lt;_Rep2=rep&gt;" />
+            <marker date="1508013340000" expanded="true" signature="11452:11511" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="11556:11606" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="11936:12020" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="12057:12120" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="12231:12444" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="12450:12534" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="12571:12634" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="12745:12958" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="12964:13096" ph="&lt;_Rep1,_Rep2,bool=is_convertible&lt;_Rep2,common_type&lt;_Rep1,_Rep2&gt;::type&gt;::value&gt;" />
+            <marker date="1508013340000" expanded="false" signature="13138:13178" ph="&lt;_Rep1,_Rep2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="13236:13294" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="13301:13359" ph="&lt;_Rep1,_Period,_Rep2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="13525:13651" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="13657:13715" ph="&lt;_Rep1,_Rep2,_Period&gt;" />
+            <marker date="1508013340000" expanded="false" signature="13908:13966" ph="&lt;_Rep1,_Period,_Rep2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="13991:14105" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="14018:14089" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="14183:14309" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="14315:14399" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="14561:14768" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="14789:14847" ph="&lt;_Rep1,_Period,_Rep2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="14872:14986" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="14899:14970" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="15064:15190" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="15196:15280" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="15317:15380" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="15491:15704" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="15729:15813" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="15941:16149" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="16155:16239" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="16365:16572" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="16578:16662" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="16825:16909" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="17071:17155" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="17312:17396" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="18006:18046" ph="&lt;_Clock,_Dur&gt;" />
+            <marker date="1508013340000" expanded="true" signature="18077:19077" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="18373:18450" ph="&lt;_Dur2,=_Require&lt;is_convertible&lt;_Dur2,_Dur&gt;&gt;&gt;" />
+            <marker date="1508013340000" expanded="true" signature="18715:18753" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="18825:18863" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="19108:19165" ph="&lt;_ToDur,_Clock,_Dur&gt;" />
+            <marker date="1508013340000" expanded="true" signature="19200:19265" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="19337:19468" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="19500:20493" ph="..." />
+            <marker date="1508013340000" expanded="false" signature="20515:20597" ph="&lt;_Clock,_Dur1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="20624:20695" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="20800:21017" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="21023:21105" ph="&lt;_Rep1,_Period1,_Clock,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="21132:21203" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="21308:21525" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="21531:21613" ph="&lt;_Clock,_Dur1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="21640:21711" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="21816:22032" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="22038:22095" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="22326:22383" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="22581:22638" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="22801:22858" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="23054:23111" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="23273:23330" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="23487:23544" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="24668:26469" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="24675:24792" ph="/**...*/" />
+            <marker date="1508013340000" expanded="true" signature="24821:25724" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="25385:25486" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="25562:25718" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="25732:25857" ph="/**...*/" />
+            <marker date="1508013340000" expanded="true" signature="25886:26189" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="26197:26414" ph="/**...*/" />
+            <marker date="1508013340000" expanded="false" signature="26584:29597" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp" />
+    <entry file="file://$PROJECT_DIR$/main.cpp" />
+    <entry file="file:///usr/include/c++/7/chrono">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="811" column="23" lean-forward="false" selection-start-line="811" selection-start-column="23" selection-end-line="811" selection-end-column="23" />
+          <folding>
+            <marker date="1508013340000" expanded="false" signature="1242:1274" ph="..." />
+            <marker date="1508013340000" expanded="false" signature="1291:1413" ph="..." />
+            <marker date="1508013340000" expanded="true" signature="1494:29654" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="1498:1608" ph="/**...*/" />
+            <marker date="1508013340000" expanded="true" signature="1612:1712" ph="/**...*/" />
+            <marker date="1508013340000" expanded="true" signature="1734:1988" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="1776:1828" ph="&lt;_Rep,_Period=ratio&lt;1&gt;&gt;" />
+            <marker date="1508013340000" expanded="false" signature="1857:1925" ph="&lt;_Clock,_Dur=_Clock::duration&gt;" />
+            <marker date="1508013340000" expanded="false" signature="2104:2164" ph="&lt;_CT,_Period1,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="2211:2585" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="2420:2498" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="false" signature="2590:2636" ph="&lt;_Period1,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="2719:2751" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="2756:2834" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="2857:2940" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="2984:3083" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3015:3056" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="false" signature="3182:3221" ph="&lt;_CT,_Clock&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3269:3367" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="3372:3397" ph="&lt;_Clock&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3469:3501" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="3506:3573" ph="&lt;_Clock,_Duration1,_Duration2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3596:3689" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3734:3831" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3765:3816" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="3901:26535" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="3991:4098" ph="&lt;_ToDur,_CF,_CR,bool _NumIsOne=false,bool _DenIsOne=false&gt;" />
+            <marker date="1508013340000" expanded="true" signature="4139:4466" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="4142:4183" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="4260:4458" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="4473:4526" ph="&lt;_ToDur,_CF,_CR&gt;" />
+            <marker date="1508013340000" expanded="true" signature="4597:4834" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="4600:4641" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="4718:4826" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="4841:4894" ph="&lt;_ToDur,_CF,_CR&gt;" />
+            <marker date="1508013340000" expanded="true" signature="4966:5258" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="4969:5010" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="5087:5250" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="5265:5318" ph="&lt;_ToDur,_CF,_CR&gt;" />
+            <marker date="1508013340000" expanded="true" signature="5390:5682" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="5393:5434" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="5511:5674" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="5689:5711" ph="&lt;_Tp&gt;" />
+            <marker date="1508013340000" expanded="false" signature="5779:5820" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="false" signature="5934:5992" ph="&lt;_ToDur,_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="6027:6072" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="6141:6498" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="6395:6457" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="false" signature="6536:6559" ph="&lt;_Rep&gt;" />
+            <marker date="1508013340000" expanded="false" signature="6671:6797" ph="..." />
+            <marker date="1508013340000" expanded="false" signature="6841:8276" ph="..." />
+            <marker date="1508013340000" expanded="false" signature="8322:8345" ph="&lt;_Rep&gt;" />
+            <marker date="1508013340000" expanded="true" signature="8381:8589" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="8596:8618" ph="&lt;_Tp&gt;" />
+            <marker date="1508013340000" expanded="false" signature="8683:8721" ph="&lt;intmax_t _Num,intmax_t _Den&gt;" />
+            <marker date="1508013340000" expanded="false" signature="8821:8862" ph="&lt;_Rep,_Period&gt;" />
+            <marker date="1508013340000" expanded="true" signature="8891:11929" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="9467:9666" ph="&lt;_Rep2,=enable_if&lt;is_convertible&lt;_Rep2,rep&gt;::value&amp;&amp;(treat_as_floating_point&lt;rep&gt;::value||!treat_as_floating_point&lt;_Rep2&gt;::value)&gt;::type&gt;" />
+            <marker date="1508013340000" expanded="false" signature="9758:9983" ph="&lt;_Rep2,_Period2,=enable_if&lt;treat_as_floating_point&lt;rep&gt;::value||(ratio_divide&lt;_Period2,period&gt;::den==1&amp;&amp;!treat_as_floating_point&lt;_Rep2&gt;::value)&gt;::type&gt;" />
+            <marker date="1508013340000" expanded="true" signature="10440:10471" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="10598:10629" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="10775:10819" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="10887:10931" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="10996:11034" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="11099:11137" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="11152:11182" ph="&lt;_Rep2=rep&gt;" />
+            <marker date="1508013340000" expanded="true" signature="11228:11287" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="11329:11373" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="11376:11406" ph="&lt;_Rep2=rep&gt;" />
+            <marker date="1508013340000" expanded="true" signature="11452:11511" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="11556:11606" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="11936:12020" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="12057:12120" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="12231:12444" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="12450:12534" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="12571:12634" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="12745:12958" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="12964:13096" ph="&lt;_Rep1,_Rep2,bool=is_convertible&lt;_Rep2,common_type&lt;_Rep1,_Rep2&gt;::type&gt;::value&gt;" />
+            <marker date="1508013340000" expanded="false" signature="13138:13178" ph="&lt;_Rep1,_Rep2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="13236:13294" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="13301:13359" ph="&lt;_Rep1,_Period,_Rep2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="13525:13651" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="13657:13715" ph="&lt;_Rep1,_Rep2,_Period&gt;" />
+            <marker date="1508013340000" expanded="false" signature="13908:13966" ph="&lt;_Rep1,_Period,_Rep2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="13991:14105" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="14018:14089" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="14183:14309" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="14315:14399" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="14561:14768" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="14789:14847" ph="&lt;_Rep1,_Period,_Rep2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="14872:14986" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="14899:14970" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="15064:15190" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="15196:15280" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="15317:15380" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="15491:15704" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="15729:15813" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="15941:16149" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="16155:16239" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="16365:16572" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="16578:16662" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="16825:16909" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="17071:17155" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="17312:17396" ph="&lt;_Rep1,_Period1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="18006:18046" ph="&lt;_Clock,_Dur&gt;" />
+            <marker date="1508013340000" expanded="true" signature="18077:19077" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="18373:18450" ph="&lt;_Dur2,=_Require&lt;is_convertible&lt;_Dur2,_Dur&gt;&gt;&gt;" />
+            <marker date="1508013340000" expanded="true" signature="18715:18753" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="18825:18863" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="19108:19165" ph="&lt;_ToDur,_Clock,_Dur&gt;" />
+            <marker date="1508013340000" expanded="true" signature="19200:19265" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="19337:19468" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="19500:20493" ph="..." />
+            <marker date="1508013340000" expanded="false" signature="20515:20597" ph="&lt;_Clock,_Dur1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="20624:20695" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="20800:21017" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="21023:21105" ph="&lt;_Rep1,_Period1,_Clock,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="21132:21203" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="21308:21525" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="21531:21613" ph="&lt;_Clock,_Dur1,_Rep2,_Period2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="21640:21711" ph="&lt;~&gt;" />
+            <marker date="1508013340000" expanded="true" signature="21816:22032" ph="{...}" />
+            <marker date="1508013340000" expanded="false" signature="22038:22095" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="22326:22383" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="22581:22638" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="22801:22858" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="23054:23111" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="23273:23330" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="false" signature="23487:23544" ph="&lt;_Clock,_Dur1,_Dur2&gt;" />
+            <marker date="1508013340000" expanded="true" signature="24668:26469" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="24675:24792" ph="/**...*/" />
+            <marker date="1508013340000" expanded="true" signature="24821:25724" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="25385:25486" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="25562:25718" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="25732:25857" ph="/**...*/" />
+            <marker date="1508013340000" expanded="true" signature="25886:26189" ph="{...}" />
+            <marker date="1508013340000" expanded="true" signature="26197:26414" ph="/**...*/" />
+            <marker date="1508013340000" expanded="false" signature="26584:29597" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
