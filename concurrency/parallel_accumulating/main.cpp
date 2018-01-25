@@ -5,6 +5,7 @@
 #include <functional> /* ref */
 #include <array>
 #include <vector>
+#include <set>
 
 template<class Iterator, class T>
 void accumulate(Iterator beg, Iterator end, T &result)
