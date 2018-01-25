@@ -1,3 +1,67 @@
+// interface for shared, unique, weak, etc pointers.
+template <class T>
+class pointer_base
+{
+public:
+	typedef T data_t;
+private:
+	data_t *_data_ptr;
+protected:
+	pointer_base(data_t pointer) noexcept
+		: _data_ptr(pointer) {}
+
+	// default c-tor initializes pointer with nullptr:
+	pointer_base() : _data_ptr(nullptr) {} noexcept
+
+	// copy c-tor copies other's pointer 
+	pointer_base(pointer_base const &other) noexcept
+		: _data_ptr(other._data_ptr) {}
+
+	// move c-tor moves other's pointer
+	pointer_base(pointer_base &&other) noexcept
+		: _data_ptr(other._data_ptr) 
+	{
+		other._data_ptr = nullptr;
+	}
+
+	// copy c-tor simply copies other's pointer but
+	// not removes old data
+	pointer_base& operator=(pointer_base const &other) noexcept
+	{
+		if (this == &other) return *this;
+		_data_ptr = other._data_ptr;
+		return *this;
+	}
+
+	// move c-tor simply moves other's pointer but
+	// not removes old data
+	pointer_base& operator=(pointer_base &&other) noexcept
+	{
+		if (this == &other) return *this;
+		_data_ptr = other._data_ptr;
+		other._data_ptr = nullptr;
+		return *this;
+	}
+
+	~pointer_base() noexcept
+	{}
+
+	data_t* operator->() const noexcept
+	{
+		return data_ptr;
+	}
+
+	data_t& operator*() const noexcept
+	{
+		return *data_ptr;
+	}
+
+	bool is_empty() const noexcept
+	{
+		return _data_ptr == nullptr;
+	}
+}
+/*
 class shared_counter
 {
 public:
@@ -157,3 +221,4 @@ public:
 		return _counter;
 	}
 };
+*/
