@@ -97,7 +97,7 @@ public:
 	typedef node<T> node_t;
 	typedef unsigned int size_t;
 	typedef T data_t;
-	typedef queue<T, policy> self;
+	//typedef queue_base<T, policy> self;
 	typedef iterator<T> queue_iterator;
 
 	friend class iterator<T>;
@@ -145,7 +145,7 @@ protected:
 	{
 		delete _first;
 	}
-	
+
 public:
 	virtual void push(data_t const &data) throw(std::bad_alloc)
 	{

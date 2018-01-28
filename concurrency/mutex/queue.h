@@ -1,4 +1,5 @@
 #include <queue_base.h>
+#include <mutex>
 
 enum class Policy {
 	_S_single,
@@ -31,6 +32,14 @@ public:
 
 	queue& operator=(queue &&other)
 	{
-		if (this == &other)	
+		if (this == &other)	return *this;
+
+		this->operator=(static_cast<queue_base&&>(other));
+
+		return *this;
 	}
+
+	void push(data_t const &) override throw(std::bad_alloc);
+
+	queue_iterator pop() override throw(std::bad_alloc);
 };
