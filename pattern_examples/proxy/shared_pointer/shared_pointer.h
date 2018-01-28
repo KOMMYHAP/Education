@@ -7,7 +7,10 @@ public:
 private:
 	data_t *_data_ptr;
 protected:
-	pointer_base(data_t pointer) noexcept
+	/** @param pointer: pointer on existing data
+		@brief: copy pointer
+	*/
+	pointer_base(data_t *pointer) noexcept
 		: _data_ptr(pointer) {}
 
 	// default c-tor initializes pointer with nullptr:
@@ -26,6 +29,7 @@ protected:
 
 	// copy c-tor simply copies other's pointer but
 	// not removes old data
+	virtual 
 	pointer_base& operator=(pointer_base const &other) noexcept
 	{
 		if (this == &other) return *this;
@@ -35,6 +39,7 @@ protected:
 
 	// move c-tor simply moves other's pointer but
 	// not removes old data
+	virtual 
 	pointer_base& operator=(pointer_base &&other) noexcept
 	{
 		if (this == &other) return *this;
@@ -43,24 +48,136 @@ protected:
 		return *this;
 	}
 
-	~pointer_base() noexcept
-	{}
+	// however, pure d-tor need empty definition
+	virtual ~pointer_base() noexcept = 0;
 
-	data_t* operator->() const noexcept
+	virtual data_t* operator->() const noexcept
 	{
 		return data_ptr;
 	}
 
-	data_t& operator*() const noexcept
+	virtual data_t& operator*() const noexcept
 	{
 		return *data_ptr;
 	}
 
-	bool is_empty() const noexcept
+public:
+	inline
+	bool is_null() const noexcept
 	{
 		return _data_ptr == nullptr;
 	}
-}
+
+	inline 
+	bool operator!() const noexcept
+	{
+		return is_null();
+	}
+
+	inline
+	operator bool() const noexcept
+	{
+		return !is_null();
+	}
+};
+
+// empty definition for pure d-tor:
+pointer_base::~pointer_base() {}
+
+/**
+	@brief:
+		Every instance created increases counter
+		and every instance destructed decrease counter;
+*/
+template <class T>
+class counter
+{
+public:
+	typedef T size_t;
+private:
+	size_t *_counter_ptr {nullptr};
+public:
+	counter() noexcept
+		: _counter_ptr(new size_t(1)) {}
+
+	counter(counter const &other) noexcept
+		: _counter_ptr(other._counter_ptr) 
+	{
+		++(*_counter_ptr);
+	}
+
+	counter(counter &&other) noexcept
+		: _counter_ptr(other._counter_ptr)
+	{
+		other._counter_ptr = nullptr;
+	}
+
+	counter& operator=(counter const &other) noexcept
+	{
+		if (this == &other) return *this;
+
+		// decreases old counter:
+		--(*_counter_ptr);
+		// changes own counter on others counter:
+		_counter_ptr = other._counter_ptr;
+		// increases new counter:
+		++(*_counter_ptr);
+
+		return *this;
+	}
+
+	counter& operator=(counter &&other) noexcept
+	{
+		if (this == &other) return *this;
+
+		// decreases old counter:
+		--(*_counter_ptr);
+		// changes own counter on others counter:
+		_counter_ptr = other._counter_ptr;
+		// remove others counter:
+		other._counter_ptr = nullptr;
+
+		return *this;
+	}
+
+	~counter()
+	{
+		if (*_counter_ptr == 0) {
+			delete _counter_ptr;
+		}
+	}
+
+	inline
+	size_t use_count() const noexcept
+	{
+		return *_counter_ptr;
+	}
+};
+
+template <class T>
+class shared_pointer
+	: public pointer_base<T>
+{
+public:
+	typedef unsigned int size_t;
+private:
+	counter<size_t> _counter;
+public:
+	typedef T data_t;
+
+	shared_pointer()
+		: pointer_base()
+		, counter() {}
+
+	shared_pointer(data_t *pointer)
+		: pointer_base(pointer)
+		, counter() {}
+
+	shared_pointer(shared_pointer const &other)
+		: pointer_base(static_cast<const &pointer_base>(&other))
+		, 
+};
+
 /*
 class shared_counter
 {
