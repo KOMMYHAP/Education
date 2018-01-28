@@ -90,8 +90,78 @@ public:
 	}
 };
 
+enum class Lock_policy {
+	_S_single,
+	_S_mutex
+};
+
+// forward declaration for iterator
+template <class T> class iterator<T>;
+
 template <class T>
-class queue_base
+struct queue_access_base
+{
+	typedef iterator<T> queue_iterator;
+	virtual void push(T const &) throw(std::bad_alloc)
+	{
+		queue_iterator cur = begin(), next = begin();
+
+		if (size() == 0) {
+			_first = new node_t(data);
+			return;
+		}
+
+		++next;
+		while (next != end()) {
+			++cur;
+			++next;
+		}
+		cur->next() = new node_t(data);
+	}
+
+	virtual queue_iterator pop() throw(std::bad_alloc)
+	{
+		queue_iterator cur = begin(), next = begin();
+		if (size() == 0) {
+			return end();
+		}
+
+		++next;
+		while (next != end()) {
+			++cur;
+			++next;
+		}
+		return cur;
+	}
+}
+
+template <class T, Lock_policy policy>
+struct queue_access 
+	: public queue_access_base<T> {};
+
+template <class T, Lock_policy _S_mutex>
+struct queue_access 
+	: public queue_access_base<T>
+	, public std::mutex
+{
+public:
+	typedef T data_t;
+
+	void push(data_t const &data) override throw(std::bad_alloc)
+	{
+		std::lock_guard<std::mutex> guard(static_cast<std::mutex &>(*this));
+		static_cast<queue_access_base<T>*>(this)->push(data);
+	}
+
+	virtual pop() override throw(std::bad_alloc)
+	{
+		std::lock_guard<std::mutex> guard(static_cast<std::mutex &>(*this));
+		return static_cast<queue_access_base<T>*>(this)->pop();
+	}
+};
+
+template <class T, Lock_policy policy>
+class queue_base : queue_access<T, policy>
 {
 public:
 	typedef node<T> node_t;
@@ -101,7 +171,7 @@ public:
 	typedef iterator<T> queue_iterator;
 
 	friend class iterator<T>;
-protected:
+
 	queue_base()
 		: _first(nullptr) {}
 
@@ -146,37 +216,17 @@ protected:
 		delete _first;
 	}
 
-public:
-	virtual void push(data_t const &data) throw(std::bad_alloc)
-	{
-		queue_iterator cur = begin(), next = begin();
+	queue_iterator
+	get(size_t i) const throw(std::out_of_range)
+	{	
+		if (i >= size()) throw std::out_of_range();
 
-		if (size() == 0) {
-			_first = new node_t(data);
-			return;
+		queue_iterator result = begin();
+		while (i-- > 0) {
+			++result;
 		}
 
-		++next;
-		while (next != end()) {
-			++cur;
-			++next;
-		}
-		cur->next() = new node_t(data);
-	}
-
-	virtual queue_iterator pop() throw(std::bad_alloc)
-	{
-		queue_iterator cur = begin(), next = begin();
-		if (size() == 0) {
-			return end();
-		}
-
-		++next;
-		while (next != end()) {
-			++cur;
-			++next;
-		}
-		return cur;
+		return result;
 	}
 
 	queue_iterator begin() const noexcept
@@ -198,12 +248,6 @@ public:
 private:
 	node_t *_first;
 };
-
-template <class T>
-using queue<T> = queue_base<T, _S_single>;
-
-template <class T>
-using queue_async<T> = queue_base<T, _S_mutex>;
 
 template <class T>
 struct iterator
@@ -232,7 +276,7 @@ struct iterator
 
 	self_t& operator++() noexcept
 	{	
-		_node_ptr = _node_ptr->next;
+		_node_ptr = _node_ptr->next();
 		return *this;
     }
 
