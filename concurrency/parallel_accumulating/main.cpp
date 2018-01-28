@@ -5,7 +5,6 @@
 #include <functional> /* ref */
 #include <array>
 #include <vector>
-#include <set>
 
 template<class Iterator, class T>
 void accumulate(Iterator beg, Iterator end, T &result)
@@ -56,6 +55,8 @@ void parallel_accumulate(Iterator beg, Iterator end, T &result)
     result = std::accumulate(results.cbegin(), results.cend(), 0);
 }
 
+#include <list>
+
 int main()
 {
     // initialize array:
@@ -87,5 +88,7 @@ int main()
               << std::chrono::duration_cast<std::chrono::microseconds>(end - start).count()
               << "us "
               << "with result " << result2 << ".\n";
+    std::list<int> l;
+    l.begin();
     return 0;
 }
