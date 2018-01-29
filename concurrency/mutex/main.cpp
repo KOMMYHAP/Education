@@ -41,7 +41,7 @@ private:
 
 typedef std::vector<error> errors_t;
 
-template <Lock_policy lp>
+template <Lock_policy>
 errors_t test_push() 
 {
 	throw std::runtime_error();
@@ -50,42 +50,48 @@ errors_t test_push()
 template<>
 errors_t test_push<_S_single>()
 {
+	typedef unsigned int element_t;
 	errors_t errors{};
 	// sequentially adding elements from 0 to %amount:
-	auto pushing = [](queue<element_t> &q, auto amount) {
+	auto pushing = [&errors](queue<element_t> &q, auto amount) {
 		for (decltype(amount) i = 0; i < amount; ++i) {
-			q.push(static_cast<element_t>(i));
+			try {
+				q.push(static_cast<element_t>(i));
+			} catch(std::bad_alloc const &err) {
+				errors.emplace_back("[test_push::pushing]: cannot allocate memory")
+			}
 		}
 	};
 
 	queue<element_t> q {};
 
-	auto const amount = 1000;
+	auto const amount = 1000u;
 	typedef decltype(amount) size_t;
 	pushing(q, amount);
 
 	for (size_t i = 0; i < amount; ++i) {
 		auto it = q.get(i);
 		if (*it != i) {
-			errors.emplace_back("[test_push]: error in typically cycle");
+			errors.emplace_back("[test_push]: check error in typically cycle");
 		}
 	}
 
 	size_t i = 0;
 	for (auto const &elem : q) {
 		if (i != elem) {
-			errors.emplace_back("[test_push]: error in range-base cycle");
+			errors.emplace_back("[test_push]: check error in range-base cycle");
 		}
 		++i;
 	}
 
-	return false;
+	return errors;
 }
 
 template <>
-bool test_push<_S_mutex>()
+errors_t test_push<_S_mutex>()
 {
-	typedef int element_t;
+	throw std::runtime_error("Reconsider this function.");
+	typedef unsigned int element_t;
 	auto pushing = [](queue<element_t> &q, auto amount) {
 		for (decltype(amount) i = 0; i < amount; ++i) {
 			q.push(static_cast<element_t>(i));
@@ -97,17 +103,15 @@ bool test_push<_S_mutex>()
 	std::thread t1(pushing, std::ref(q), 100);
 	std::thread t2(pushing, std::ref(q), 100);
 	// </WTF>
+	// Why WTF? Because I don't know true answers.
 
-	t1.join();
-	t2.join();
+	t1.join(); t2.join();
 
 	return false;
 }
 
 bool test()
 {
-	bool success = true;
-
 	auto errors = test_push<_S_single>();
 
 	std::size_t const max_output_amount = 10;
