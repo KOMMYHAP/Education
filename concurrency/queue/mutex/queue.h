@@ -1,5 +1,4 @@
 #include <queue_base.h>
-#include <mutex>
 
 template <class T>
 using queue<T> = queue_base<T, _S_single>;

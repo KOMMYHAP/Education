@@ -1,3 +1,4 @@
+#include <mutex>
 #include <iterator>
 
 template <class T>
@@ -6,15 +7,14 @@ class node
 public:
 	typedef T data_t;
 	typedef node<T> node_t;
+
+	typedef std::shared_ptr<data_t> data_ptr_t;
+	typedef std::shared_ptr<node_t> node_ptr_t;
 private:
-	data_t *_data_ptr {nullptr};
-	node_t *_next_ptr {nullptr};
+	data_ptr_t _data_ptr {nullptr};
+	node_ptr_t _next_ptr {nullptr};
 public:
 	node() = default;
-
-	node(data_t *data_ptr, node_t *next_node_ptr)
-		: _next_ptr(next_node_ptr)
-		, _data_ptr(data_ptr) {}
 
 	node(node const &other) 
 		: _data_ptr(nullptr)
@@ -98,21 +98,24 @@ enum class Lock_policy {
 // forward declaration for iterator
 template <class T> class iterator<T>;
 
-template <class T>
+template <class T, Lock_policy policy>
 struct queue_access_base
 {
+	typedef node<T> node_t;
 	typedef iterator<T> queue_iterator;
+
 	virtual void push(T const &) throw(std::bad_alloc)
 	{
-		queue_iterator cur = begin(), next = begin();
+		auto const *__this = static_cast<queue_base<T, policy> const *>(this);
+		queue_iterator cur = __this->begin(), next = __this->begin();
 
-		if (size() == 0) {
+		if (__this->size() == 0) {
 			_first = new node_t(data);
 			return;
 		}
 
 		++next;
-		while (next != end()) {
+		while (next != __this->end()) {
 			++cur;
 			++next;
 		}
@@ -121,13 +124,14 @@ struct queue_access_base
 
 	virtual queue_iterator pop() throw(std::bad_alloc)
 	{
-		queue_iterator cur = begin(), next = begin();
-		if (size() == 0) {
-			return end();
+		auto const *__this = static_cast<queue_base<T, policy> const *>(this);
+		queue_iterator cur = __this->begin(), next = __this->begin();
+		if (__this->size() == 0) {
+			return __this->end();
 		}
 
 		++next;
-		while (next != end()) {
+		while (next != __this->end()) {
 			++cur;
 			++next;
 		}
@@ -135,13 +139,17 @@ struct queue_access_base
 	}
 }
 
+// forward declaration for queue_access;
 template <class T, Lock_policy policy>
-struct queue_access 
-	: public queue_access_base<T> {};
+struct queue_access;
 
-template <class T, Lock_policy _S_mutex>
+template <class T, _S_single>
 struct queue_access 
-	: public queue_access_base<T>
+	: public queue_access_base<T, _S_single> {};
+
+template <class T, _S_mutex>
+struct queue_access 
+	: public queue_access_base<T, _S_mutex>
 	, public std::mutex
 {
 public:
@@ -161,10 +169,9 @@ public:
 };
 
 template <class T, Lock_policy policy>
-class queue_base : queue_access<T, policy>
+class queue_base : public queue_access<T, policy>
 {
 public:
-	typedef node<T> node_t;
 	typedef unsigned int size_t;
 	typedef T data_t;
 	//typedef queue_base<T, policy> self;
@@ -178,8 +185,12 @@ public:
 	queue_base(queue_base const &other) throw(std::bad_alloc)
 		: _first(nullptr)
 	{
-		if (other._first != nullptr) {
-			_first = new node_t(*other._first);
+		try {
+			for (auto const &data : other) {
+				push(data);
+			}
+		} catch(std::bad_alloc const &err) {
+			std::cerr << err.what() << std::endl;	
 		}
 	}
 
