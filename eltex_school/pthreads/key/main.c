@@ -1,9 +1,9 @@
 #include <pthread.h>	/* pthread* */
-#include <stdio.h> 		/* NULL */
-#include <stdlib.h> 	/* free */
+#include <stdio.h>		/* NULL */
+#include <stdlib.h>		/* free */
 #include <errno.h> 		/* errno */
-#include <string.h> 	/* memcpy */
-#include <unistd.h> 	/* sleep */
+#include <string.h>		/* memcpy */
+#include <unistd.h>		/* sleep */
 
 #define thread_num 5
 
