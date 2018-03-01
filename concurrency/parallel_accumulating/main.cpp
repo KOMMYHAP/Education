@@ -55,8 +55,6 @@ void parallel_accumulate(Iterator beg, Iterator end, T &result)
     result = std::accumulate(results.cbegin(), results.cend(), 0);
 }
 
-#include <list>
-
 int main()
 {
     // initialize array:
@@ -66,7 +64,8 @@ int main()
 
     // initialize array's data:
     for (auto &elem : array) {
-        elem = rand() % std::numeric_limits<array_t>::max();
+//        elem = rand() % std::numeric_limits<array_t>::max();
+        elem = 1;
     }
 
     uint64_t result1{0};
@@ -88,7 +87,6 @@ int main()
               << std::chrono::duration_cast<std::chrono::microseconds>(end - start).count()
               << "us "
               << "with result " << result2 << ".\n";
-    std::list<int> l;
-    l.begin();
+
     return 0;
 }
