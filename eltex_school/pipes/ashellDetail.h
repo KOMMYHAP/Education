@@ -17,14 +17,20 @@ int getCommand(char* *cmd);
 
 
 /* 	Parses complex command and put
-	first simple command to token.
+	first simple (without pipe) command to token.
 	Example: 
-		after: 
-			cmd = "ps -ef | grep 2017",
-			token = NULL
 		before: 
-			cmd = "| grep 2017", 
-			token = "ps -ef" 
+			cmd = "ps -ef | grep root | grep 8311",
+			token = NULL
+		after 1 iter: 
+			cmd = "grep root | grep 8311", 
+			token = "ps -ef"
+		after 2 iter:
+			cmd = "grep 8311",
+			token = "grep root" 
+		after 3 iter:
+			cmd = NULL,
+			token = "grep 8311"
 */
 int parseCommand(char* cmd, char* *token);
 
