@@ -3,9 +3,12 @@
 
 
 /*	Handles and disassembles complex command and 
-	execute its. */
+	execute its.
+	Return values:
+		-1 - unsuccessfull command completion,
+		 0 - exit command,
+		 1 - otherwise */
 int handleCommand(char* cmd);
-
 
 /* 	Get user's command from standard input 
 	Example: "ps -ef | grep 2017" */
