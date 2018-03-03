@@ -10,6 +10,7 @@
 		 1 - otherwise */
 int handleCommand(char* cmd);
 
+
 /* 	Get user's command from standard input 
 	Example: "ps -ef | grep 2017" */
 int getCommand(char* *cmd);
