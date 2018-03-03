@@ -1,6 +1,16 @@
 #ifndef ASHELL
 #define ASHELL
 
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <signal.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+
+/* 	Signals handler for SIGCHLD */
+void sighandler(int sig);
+
 /* 	Print intro message, like 
 	"[author]: <username>,
 	 [description]: <some text>,
