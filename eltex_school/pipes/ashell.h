@@ -17,7 +17,11 @@ void ashellInit();
 void ashellLoop();
 
 /* 	Every iteration of main-loop
-	will invoked this function */
-void ashellStep();
+	will invoked this function.
+	Return values:
+		-1 - unsuccessfull step completion,
+		 0 - last step completed, end of loop,
+		 1 - succeffull step comletion */
+int ashellStep();
 
 #endif // ASHELL
