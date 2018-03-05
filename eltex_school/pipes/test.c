@@ -1,19 +1,37 @@
 #include <unistd.h> /* pipe */
 #include <stdio.h> /*stdin, stdout, fprintf, etc */
 #include <stdlib.h> /* exit */
+#include <string.h> /* strlen */
 
 // In success, zero is returned;
 int testReading(int *number)
 {
-	const int retvalue = scanf("%d", number);
-	return (retvalue == 1) ? 0 : 1;
+	const int retvalue = read(1, (void*)number, sizeof(*number));
+	return (retvalue == sizeof(*number)) ? 0 : 1;
 }
 
 // In success, zero is returned;
 int testWriting(int number)
 {
-	const int retvalue = printf("%d", number);
-	return (retvalue > 0) ? 0 : 1;
+	const int retvalue = write(2, (void*)&number, sizeof(number));
+	return (retvalue == sizeof(number)) ? 0 : 1;
+}
+
+// In success, zero is returned;
+int testTrivial(int fd[2])
+{
+	char msg = 'x';
+	char buffer = '\0';
+
+	if (dup2(1, fd[0]) == -1 || dup2(2, fd[1]) == -1) {
+		perror("[testTrivial::dup2]");
+		exit(1);
+	}
+
+	write(2, &msg, 1);
+	read(1, &buffer, 1);
+
+	return (msg == buffer) ? 0 : 1;
 }
 
 /* 	In success, zero is returned,
@@ -48,13 +66,18 @@ int main()
 		exit(1);
 	}
 
-	if (dup2(2, fd[1]) != fd[1]) {
-		perror("[main::dup2 /* write fd*/]");
+	if (testTrivial(fd) != 0) {
+		dprintf(3, "[main::testTrivial]");
 		exit(1);
 	}
 
-	if (dup2(1, fd[0]) != fd[0]) {
-		perror("[main::dup2 /* read fd */]");
+	if (dup2(2, fd[1]) == -1) {
+		perror("[main::dup2 /* write fd*/ ]");
+		exit(1);
+	}
+
+	if (dup2(1, fd[0]) == -1) {
+		perror("[main::dup2 /* read fd */ ]");
 		exit(1);
 	}
 
@@ -73,6 +96,12 @@ int main()
 			fprintf(stderr, "[main::test]: equaling failed.");
 			break;
 	}
+
+	if (close(fd[0]) != 0 || close(fd[1]) != 0) {
+		perror("[main::close]");
+		exit(1);
+	}
+
 	fprintf(stderr, "\n");
 	return 0;
 }
