@@ -18,14 +18,14 @@ int testWriting(int number)
 }
 
 // In success, zero is returned;
-int testTrivial(int fd[2])
+int testTrivial(int newfd[2])
 {
 	char msg = 'x';
 	char buffer = '\0';
 
 	int const oldfd[2] = {dup(STDIN_FILENO), dup(STDOUT_FILENO)};
 
-	if (dup2(fd[0], STDIN_FILENO) == -1 || dup2(fd[1], STDOUT_FILENO) == -1) {
+	if (dup2(newfd[0], STDIN_FILENO) == -1 || dup2(newfd[1], STDOUT_FILENO) == -1) {
 		perror("[testTrivial::dup2]");
 		return 1;
 	}
