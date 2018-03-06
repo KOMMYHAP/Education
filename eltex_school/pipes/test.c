@@ -39,7 +39,7 @@ int testTrivial(int newfd[2])
 		return 1;
 	}
 
-	if (dup2(STDIN_FILENO, oldfd[0]) == -1 || dup2(STDOUT_FILENO, oldfd[1]) == -1) {
+	if (dup2(oldfd[0], STDIN_FILENO) == -1 || dup2(oldfd[1], STDOUT_FILENO) == -1) {
 		perror("[testTrivial::dup2]");
 		return 1;
 	}
