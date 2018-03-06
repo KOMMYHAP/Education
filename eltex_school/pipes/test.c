@@ -44,7 +44,7 @@ int testTrivial(int newfd[2])
 		return 1;
 	}
 
-	dprintf(STDOUT_FILENO, "testTrivial is comleted successfully.\n");
+	dprintf(STDOUT_FILENO, "Old file descriprotrs were returned successfully.\n");
 
 	return (msg == buffer) ? 0 : 1;
 }
