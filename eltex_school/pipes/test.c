@@ -44,7 +44,7 @@ int testTrivial(int fd[2])
 		return 1;
 	}
 
-	dprintf(STDIN_FILENO, "testTrivial is comleted successfully.\n");
+	dprintf(STDOUT_FILENO, "testTrivial is comleted successfully.\n");
 
 	return (msg == buffer) ? 0 : 1;
 }
