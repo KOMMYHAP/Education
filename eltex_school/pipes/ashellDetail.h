@@ -1,6 +1,10 @@
 #ifndef ASHELL_DETAIL_H
 #define ASHELL_DETAIL_H
 
+/* 	Get user's command from standard input 
+	Example: "ps -ef | grep 2017" */
+int getCommand(char* *cmd);
+
 
 /*	Handles and disassembles complex command and 
 	execute its.
@@ -10,10 +14,14 @@
 		 1 - otherwise */
 int handleCommand(char* cmd);
 
+/*	Saves file descriptors of standard input-output
+	in the oldfd[2]	*/
+void saveIOfd(int oldfd[2]);
 
-/* 	Get user's command from standard input 
-	Example: "ps -ef | grep 2017" */
-int getCommand(char* *cmd);
+
+/*	Loads standard input-output file descriptors 
+	saved previously */
+void loadIOfd(int oldfd[2]);
 
 
 /* 	Parses complex command and put
