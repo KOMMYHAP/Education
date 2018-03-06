@@ -23,13 +23,28 @@ int testTrivial(int fd[2])
 	char msg = 'x';
 	char buffer = '\0';
 
-	if (dup2(1, fd[0]) == -1 || dup2(2, fd[1]) == -1) {
+	int const oldfd[2] = {dup(STDIN_FILENO), dup(STDOUT_FILENO)};
+
+	if (dup2(fd[0], STDIN_FILENO) == -1 || dup2(fd[1], STDOUT_FILENO) == -1) {
 		perror("[testTrivial::dup2]");
-		exit(1);
+		return 1;
 	}
 
-	write(2, &msg, 1);
-	read(1, &buffer, 1);
+	if (write(STDOUT_FILENO, &msg, 1) != 1) {
+		perror("[testTrivial::write]");
+		return 1;
+	}
+	if (read(STDIN_FILENO, &buffer, 1) != 1) {
+		perror("[testTrivial::read]");
+		return 1;
+	}
+
+	if (dup2(STDIN_FILENO, oldfd[0]) == -1 || dup2(STDOUT_FILENO, oldfd[1]) == -1) {
+		perror("[testTrivial::dup2]");
+		return 1;
+	}
+
+	dprintf(STDIN_FILENO, "testTrivial is comleted successfully.\n");
 
 	return (msg == buffer) ? 0 : 1;
 }
@@ -95,6 +110,8 @@ int main()
 		case -3:
 			fprintf(stderr, "[main::test]: equaling failed.");
 			break;
+		default:
+			fprintf(stderr, "[main::test]: unknown error.");
 	}
 
 	if (close(fd[0]) != 0 || close(fd[1]) != 0) {
