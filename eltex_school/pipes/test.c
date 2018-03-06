@@ -6,14 +6,14 @@
 // In success, zero is returned;
 int testReading(int *number)
 {
-	const int retvalue = read(1, (void*)number, sizeof(*number));
+	const int retvalue = read(0, (void*)number, sizeof(*number));
 	return (retvalue == sizeof(*number)) ? 0 : 1;
 }
 
 // In success, zero is returned;
 int testWriting(int number)
 {
-	const int retvalue = write(2, (void*)&number, sizeof(number));
+	const int retvalue = write(1, (void*)&number, sizeof(number));
 	return (retvalue == sizeof(number)) ? 0 : 1;
 }
 
@@ -86,12 +86,12 @@ int main()
 		exit(1);
 	}
 
-	if (dup2(2, fd[1]) == -1) {
+	if (dup2(fd[1], 1) == -1) {
 		perror("[main::dup2 /* write fd*/ ]");
 		exit(1);
 	}
 
-	if (dup2(1, fd[0]) == -1) {
+	if (dup2(fd[0], 0) == -1) {
 		perror("[main::dup2 /* read fd */ ]");
 		exit(1);
 	}
