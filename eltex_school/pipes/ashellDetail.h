@@ -1,8 +1,24 @@
 #ifndef ASHELL_DETAIL_H
 #define ASHELL_DETAIL_H
 
+#include <assert.h> /* assert */
+
+#define _GNU_SOURCE
+#include <fcntl.h> /* O_* constants */
+
+#include <unistd.h> /* pipe */
+#include <stdio.h> /* perror */
+#include <stdlib.h> /* calloc */
+#include <string.h> /* strpbrk */
+
+#include <sys/types.h> /* wait */
+#include <sys/wait.h>  /* wait */
+
+
 /* 	Get user's command from standard input 
-	Example: "ps -ef | grep 2017" */
+	Return values:
+		In success case, 0 is returned;
+		Otherwise 1 is returned. */
 int getCommand(char* *cmd);
 
 
@@ -12,52 +28,34 @@ int getCommand(char* *cmd);
 		-1 - unsuccessfull command completion,
 		 0 - exit command,
 		 1 - otherwise */
-int handleCommand(char* cmd);
+int handleCommand(char *command);
+
 
 /*	Saves file descriptors of standard input-output
-	in the oldfd[2]	*/
-void saveIOfd(int oldfd[2]);
+	in the oldfd[2];
+	Is success case, zero is returned. */
+int saveIOfd(int old_fd[2]);
 
 
 /*	Loads standard input-output file descriptors 
-	saved previously */
-void loadIOfd(int oldfd[2]);
+	saved previously;
+	Is success case, zero is returned. */
+int loadIOfd(int old_fd[2]);
 
 
-/* 	Parses complex command and put
-	first simple (without pipe) command to token.
-	Example: 
-		before: 
-			cmd = "ps -ef | grep root | grep 8311",
-			token = NULL
-		after 1 iter: 
-			cmd = "grep root | grep 8311", 
-			token = "ps -ef"
-		after 2 iter:
-			cmd = "grep 8311",
-			token = "grep root" 
-		after 3 iter:
-			cmd = NULL,
-			token = "grep 8311"
-*/
-int parseCommand(char* cmd, char* *token);
+/**/
+int setIOfd(int first_pipe[2], int second_pipe[2]);
 
 
-/* 	Executes simple command, like "ps -ef".
-	Return > 0 if successfully completed. */
-int execute(char *token);
+/**/
+int executeToken(char *token, int first_pipe[2], int second_pipe[2]);
 
 
-/*	Parses simple command to token.
-	Accessory function for execute().
-	Example:
-		after:
-			token = "ps -ef", 
-			argv = NULL
-		before:
-			token = NULL,
-			argv = {"ps", "-ef"} */
-void parseToken(char* token, char* **argv);
+/**/
+int createPipes(int first_pipe[2], int second_pipe[2]);
 
+
+/**/
+void swapPipes(int pipe1[2], int pipe2[2]);
 
 #endif //ASHELL_DETAIL_H
