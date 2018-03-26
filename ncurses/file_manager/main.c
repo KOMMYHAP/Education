@@ -2,9 +2,6 @@
 #include <assert.h>
 #include <stdlib.h>
 
-#define ENTER 10
-#define ESCAPE 27
-
 const float page_coef[] = {0.15f, 0.45f, 0.50f};
 const int page_n = 3;
 
@@ -22,6 +19,13 @@ typedef enum { /* bars */
 	status
 } bar_t;
 
+typedef enum {
+	COLOR_BORDER = 0,
+	COLOR_SELECTED,
+	COLOR_TEXT
+} color_t;
+
+
 typedef struct {
 	WINDOW *data;
 	WINDOW *border;
@@ -31,15 +35,16 @@ void init_curses()
 {
     initscr();
     start_color();
-    init_pair(1, COLOR_WHITE, COLOR_BLUE);
-    init_pair(2, COLOR_BLUE, COLOR_WHITE);
-    init_pair(3, COLOR_RED, COLOR_WHITE);
+    init_pair(COLOR_TEXT, COLOR_WHITE, COLOR_BLACK);
+
+	wbkgd(stdscr, COLOR_PAIR(COLOR_TEXT));
+
     curs_set(0); // невидимый курсор
     noecho();
-    //keypad(stdscr, TRUE);  
+    keypad(stdscr, TRUE);
 }
 
-void init_windows(window_t *windows, int n, float const coef[n], int h, int y)
+void init_windows(window_t *windows, int n, float const coef[n], int h, int offset_y)
 {
 	int max_w, max_h;
 	getmaxyx(stdscr, max_h, max_w);	
@@ -49,12 +54,11 @@ void init_windows(window_t *windows, int n, float const coef[n], int h, int y)
 		w = (int)(max_w * coef[i]);
 
 		windows[i].border = /* params: (h, w, y, x) */
-			newwin(h, w, y, offset_x);
-
+			subwin(stdscr, h, w, offset_y, offset_x);
 		box(windows[i].border, ACS_VLINE, ACS_HLINE);
 
 		windows[i].data =
-			subwin(windows[i].border, h - 2, w - 2, y + 1, offset_x + 1);
+			subwin(windows[i].border, h - 2, w - 2, offset_y + 1, offset_x + 1);
 
 		offset_x += w;
 	}
@@ -74,6 +78,7 @@ void init_bars(window_t *bars)
 	getmaxyx(stdscr, max_h, max_w);
 
 	init_windows(bars, bar_n, bar_coef, 3, max_h - 3);
+
 }
 
 void destroy_windows(window_t *windows, int n) 
@@ -90,7 +95,6 @@ int main()
 	window_t bars[bar_n];
 
 	init_curses();
-	bkgd(COLOR_PAIR(1));
 
 	init_pages(pages);
 	init_bars(bars);
@@ -98,7 +102,6 @@ int main()
     waddstr(pages[prev].data, "kommyhap\n");
 
     waddstr(pages[cur ].data, "programs\n");
-    waddstr(pages[cur ].data, "qweqeweqw\n");
 
     waddstr(pages[next].data, "education\n");
 
