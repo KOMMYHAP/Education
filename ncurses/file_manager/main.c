@@ -2,7 +2,7 @@
 #include <assert.h>
 #include <stdlib.h>
 
-const float page_coef[] = {0.15f, 0.45f, 0.50f};
+const float page_coef[] = {0.15f, 0.4f, 0.45f};
 const int page_n = 3;
 
 const float bar_coef[] = {0.8f, 0.2f};
@@ -78,7 +78,6 @@ void init_bars(window_t *bars)
 	getmaxyx(stdscr, max_h, max_w);
 
 	init_windows(bars, bar_n, bar_coef, 3, max_h - 3);
-
 }
 
 void destroy_windows(window_t *windows, int n) 
@@ -108,7 +107,6 @@ int main()
     waddstr(bars[message].data, "Message bar testing.\n");
     waddstr(bars[status ].data, "100%\n");
 
-    refresh();
     getch();
 
     destroy_windows(pages, page_n);
