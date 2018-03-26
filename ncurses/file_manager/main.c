@@ -1,8 +1,31 @@
 #include <ncurses.h>
+#include <assert.h>
 #include <stdlib.h>
 
 #define ENTER 10
 #define ESCAPE 27
+
+const float page_coef[] = {0.15f, 0.45f, 0.50f};
+const int page_n = 3;
+
+const float bar_coef[] = {0.8f, 0.2f};
+const int bar_n  = 2;
+
+typedef enum { /* pages */
+	prev = 0, 
+	cur, 
+	next
+} page_t;
+
+typedef enum { /* bars */
+	message = 0,
+	status
+} bar_t;
+
+typedef struct {
+	WINDOW *data;
+	WINDOW *border;
+} window_t;
 
 void init_curses()
 {
@@ -13,52 +36,82 @@ void init_curses()
     init_pair(3, COLOR_RED, COLOR_WHITE);
     curs_set(0); // невидимый курсор
     noecho();
-    keypad(stdscr, TRUE);
+    //keypad(stdscr, TRUE);  
 }
 
+void init_windows(window_t *windows, int n, float const coef[n], int h, int y)
+{
+	int max_w, max_h;
+	getmaxyx(stdscr, max_h, max_w);	
 
+	int offset_x = 0, w;
+	for (int i = 0; i < n; ++i) {
+		w = (int)(max_w * coef[i]);
+
+		windows[i].border = /* params: (h, w, y, x) */
+			newwin(h, w, y, offset_x);
+
+		box(windows[i].border, ACS_VLINE, ACS_HLINE);
+
+		windows[i].data =
+			subwin(windows[i].border, h - 2, w - 2, y + 1, offset_x + 1);
+
+		offset_x += w;
+	}
+}
+
+void init_pages(window_t *pages)
+{
+	int max_w, max_h;
+	getmaxyx(stdscr, max_h, max_w);
+
+	init_windows(pages, page_n, page_coef, max_h - 3, 0);
+}
+
+void init_bars(window_t *bars)
+{
+	int max_w, max_h;
+	getmaxyx(stdscr, max_h, max_w);
+
+	init_windows(bars, bar_n, bar_coef, 3, max_h - 3);
+}
+
+void destroy_windows(window_t *windows, int n) 
+{
+    for (int i = 0; i < n; ++i) {
+    	delwin(windows[i].data);
+    	delwin(windows[i].border);
+    }
+}
 
 int main()
 {
-	enum {
-		prev = 0, 
-		cur, 
-		next
-	};
-
-	WINDOW *page[3];
-	WINDOW *message_bar, *status_bar;
+	window_t pages[page_n];
+	window_t bars[bar_n];
 
 	init_curses();
 	bkgd(COLOR_PAIR(1));
 
-	int max_w, max_h;
-	getmaxyx(stdscr, max_h, max_w);
+	init_pages(pages);
+	init_bars(bars);
 
-	int length[3]; /* 10% | 30% | 60% */
-	length[prev] = (int)(max_w * 0.1f);
-	length[cur ] = (int)(max_w * 0.3f);
-	length[next] = (int)(max_w * 0.6f);
+    waddstr(pages[prev].data, "kommyhap\n");
 
-	page[prev] = 
-		subwin(stdscr, max_h - 2, length[prev], 0, 0);
+    waddstr(pages[cur ].data, "programs\n");
+    waddstr(pages[cur ].data, "qweqeweqw\n");
 
-	page[cur ] = 
-		subwin(stdscr, max_h - 2, length[cur], 0, length[prev] + 7);
+    waddstr(pages[next].data, "education\n");
 
-	page[next] = 
-		subwin(stdscr, max_h - 2, length[next], 0, length[prev] + length[cur]);
+    waddstr(bars[message].data, "Message bar testing.\n");
+    waddstr(bars[status ].data, "100%\n");
 
-
-    waddstr(page[prev], "kommyhap");
-    waddstr(page[cur ], "programs");
-    waddstr(page[next], "education");
-
+    refresh();
     getch();
 
-    for (int i = 0; i < 3; ++i) {
-    	delwin(page[i]);
-    }
+    destroy_windows(pages, page_n);
+    destroy_windows(bars, bar_n);
 
 	endwin();
+
+	return 0;
 }
