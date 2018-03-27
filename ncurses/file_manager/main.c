@@ -1,6 +1,7 @@
 #include <ncurses.h>
 #include <assert.h>
 #include <stdlib.h>
+#include <string.h> /* strlen */
 
 const float page_coef[] = {0.15f, 0.4f, 0.45f};
 const int page_n = 3;
@@ -88,6 +89,23 @@ void destroy_windows(window_t *windows, int n)
     }
 }
 
+void writeln(window_t window, char const *message)
+{
+	char filler[] = "..";
+
+	int max_h, max_w;
+	getmaxyx(window.data, max_h, max_w);
+
+	int y, x;
+	getyx(window.data, y, x);
+
+	wprintw(window.data, "%.*s", max_w, message);
+
+	if (strlen(message) > max_w) { // "\n" is not nessessary to consider
+		mvwprintw(window.data, y, max_w - strlen(filler), "%s", filler);
+	}
+}
+
 int main()
 {
 	window_t pages[page_n];
@@ -98,14 +116,14 @@ int main()
 	init_pages(pages);
 	init_bars(bars);
 
-    waddstr(pages[prev].data, "kommyhap\n");
+    writeln(pages[prev], "kommyhap");
 
-    waddstr(pages[cur ].data, "programs\n");
+    writeln(pages[cur ], "programs");
 
-    waddstr(pages[next].data, "education\n");
+    writeln(pages[next], "education");
 
-    waddstr(bars[message].data, "Message bar testing.\n");
-    waddstr(bars[status ].data, "100%\n");
+    writeln(bars[message], "Message bar testing.");
+    writeln(bars[status ], "100%");
 
     getch();
 
