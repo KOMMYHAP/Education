@@ -10,6 +10,9 @@ int main(int argc, char *argv[])
 
 	pages = init_pages();
 	if (pages == NULL) {
+		//TODO: strderr либо поглощен ncurses, либо fprintf, вызванный после 
+		// init_curses() работает некорректно, но все сообщения об ошибках
+		// не будут напечатаны. Разобраться.
 		fprintf(stderr, "E: init_pages() could not allocate the memmory.\n");
 		goto free_label;
 	}

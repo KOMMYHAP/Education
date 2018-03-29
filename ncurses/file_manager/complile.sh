@@ -1,0 +1,1 @@
+gcc main.c curses.c detail.c pages.c bars.c -lcurses -o main
