@@ -1,3 +1,5 @@
+#include <errno.h>
+
 #include "curses.h"
 #include "pages.h"
 #include "bars.h"
@@ -10,16 +12,13 @@ int main(int argc, char *argv[])
 
 	pages = init_pages();
 	if (pages == NULL) {
-		//TODO: strderr либо поглощен ncurses, либо fprintf, вызванный после 
-		// init_curses() работает некорректно, но все сообщения об ошибках
-		// не будут напечатаны. Разобраться.
-		fprintf(stderr, "E: init_pages() could not allocate the memmory.\n");
+		errno = ENOSPC;
 		goto free_label;
 	}
 
 	bars = init_bars();
 	if (bars == NULL) {
-		fprintf(stderr, "E: init_bars() could not allocate the memmory.\n");
+		errno = ENOSPC;
 		goto free_label;
 	}
 
@@ -39,6 +38,10 @@ free_label:
     destroy_windows(bars, bar_n);
 
 	endwin();
+
+	if (errno != 0) {
+		perror("\033[0;31mE\033[0m");
+	}
 
 	return 0;
 }
