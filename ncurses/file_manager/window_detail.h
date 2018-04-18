@@ -16,23 +16,17 @@ typedef struct {
 
 /* 	@brief: инициализация окон, расположенных в одну линию
 	@params: 
-		windows: массив окон;
+		windows: массив указателей на window_t;
 		n: кол-во окон;
 		coef[n]: массив коэффициентов ширины данных окон; 
 		h: высота окон,
 		offset_y: смещение по y 
 */
-void init_windows(window_t *windows, int n, float const coef[n], int h, int offset_y);
+void init_windows(window_t **window_ptrs, int n, float const coef[n], int h, int offset_y);
 
 
-/*
-	@brief: уничтожает окна и высвобождает выделенную
-		под них память
-	@params:
-		windows: массив окон;
-		n: кол-во окон;
-*/
-void destroy_windows(window_t *windows, int n);
+/* 	@brief: высвобождает все ресурсы, связанные с данным окном */
+void window_free(window_t *window_ptr);
 
 
 /* 	@brief: обертка над стандартной функцией waddstr с 
@@ -43,6 +37,6 @@ void destroy_windows(window_t *windows, int n);
 		message: сообщение, которое необходимо записать;
 	@note: Явно указывать '\n' в message не требуется.
 */
-void writeln(window_t window, char const *message);
+void writeln(window_t *window_ptr, char const *message);
 
 #endif
